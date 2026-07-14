@@ -1,3 +1,7 @@
+
+VIDEO TUTORIAL: https://youtu.be/vB5YN39vRlo
+
+
 # 🎮 GameVault
 
 GameVault é uma aplicação desenvolvida em **PHP**, **MySQL** e **JavaScript**, que consome a API pública **FreeToGame** para sincronizar e exibir um catálogo de jogos gratuitos.
