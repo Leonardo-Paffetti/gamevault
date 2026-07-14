@@ -1,0 +1,21 @@
+# Environment
+.env
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log
+storage/logs/*
+
+# Dependencies (if composer is ever introduced)
+vendor/
+composer.lock
+
+# Laragon / local artifacts
+*.sql.bak

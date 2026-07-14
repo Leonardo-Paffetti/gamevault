@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GameVault — Catálogo de Jogos Gratuitos</title>
+  <meta name="description" content="Descubra centenas de jogos gratuitos em um único catálogo." />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="header-top">
+        <div class="brand">
+          <div class="brand-logo">🎮</div>
+          <div class="brand-text">
+            <h1>GameVault</h1>
+            <p>Descubra centenas de jogos gratuitos em um único catálogo.</p>
+          </div>
+        </div>
+
+        <div class="header-stats">
+          <div><strong id="total-count">0</strong><br />jogos no catálogo</div>
+          <div><strong id="last-sync">nunca sincronizado</strong><br />última sincronização</div>
+        </div>
+
+        <button id="sync-button" class="sync-button" type="button">
+          <span class="icon">↻</span>
+          <span class="label">Sincronizar Catálogo</span>
+        </button>
+      </div>
+
+      <div class="toolbar">
+        <div class="search-field">
+          <span class="search-icon">🔍</span>
+          <input id="search-input" type="text" placeholder="Buscar jogo pelo nome..." autocomplete="off" />
+        </div>
+
+        <div class="select-field">
+          <select id="genre-filter" aria-label="Filtrar por gênero">
+            <option value="">Todos os gêneros</option>
+          </select>
+        </div>
+
+        <div class="select-field">
+          <select id="platform-filter" aria-label="Filtrar por plataforma">
+            <option value="">Todas as plataformas</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- Loading skeleton -->
+    <div id="skeleton-grid" class="skeleton-grid">
+      <div class="skeleton-card"></div>
+      <div class="skeleton-card"></div>
+      <div class="skeleton-card"></div>
+      <div class="skeleton-card"></div>
+    </div>
+
+    <!-- Games grid -->
+    <div id="games-grid" class="games-grid"></div>
+
+    <!-- Empty database state -->
+    <div id="state-empty" class="state-panel warning">
+      <div class="state-icon">🗃️</div>
+      <h3>Seu catálogo está vazio</h3>
+      <p>Clique em "Sincronizar Catálogo" para importar os jogos diretamente da FreeToGame.</p>
+    </div>
+
+    <!-- No search results state -->
+    <div id="state-no-results" class="state-panel">
+      <div class="state-icon">🕵️</div>
+      <h3>Nenhum jogo encontrado</h3>
+      <p>Tente ajustar sua busca ou remover os filtros aplicados.</p>
+    </div>
+
+    <!-- Error state -->
+    <div id="state-error" class="state-panel error">
+      <div class="state-icon">⚠️</div>
+      <h3>Algo deu errado</h3>
+      <p id="state-error-message">Não foi possível carregar o catálogo. Tente novamente.</p>
+    </div>
+
+  </main>
+
+  <!-- Details modal -->
+  <div id="game-modal" class="modal-overlay">
+    <div class="modal-box" style="position: relative;">
+      <div id="modal-content-inner"></div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      Dados fornecidos por <a href="https://www.freetogame.com/" target="_blank" rel="noopener noreferrer">FreeToGame</a>
+    </div>
+  </footer>
+
+  <script src="assets/js/api.js"></script>
+  <script src="assets/js/ui.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
