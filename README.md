@@ -224,10 +224,4 @@ https://www.freetogame.com/api
 
 **Leonardo Paffetti**
 
-GitHub
 
-https://github.com/Paffetti
-
-LinkedIn
-
-https://linkedin.com/in/leonardopaffetti
